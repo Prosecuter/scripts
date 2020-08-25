@@ -2,8 +2,8 @@
 # Copyright (C) 2020 Prosecuter
 #
 
-export DEVICE="Vince"
-export DEFCONFIG="vince"
+export DEVICE="Ysl"
+export DEFCONFIG="ysl"
 export JOBS=$(nproc --all)
 export CHANNEL_ID="$CHAT_ID"
 export TELEGRAM_TOKEN="$BOT_API_KEY"
@@ -15,7 +15,7 @@ export KBUILD_BUILD_USER="StormbreakerCI-BOT"
 export GCC_COMPILE="$GCC" 
 export CLANG_VER="$VER_CLANG"
 export KBUILD_BUILD_HOST="Stormbreaker-HQ"
-export REVISION="7.1"
+export REVISION="1"
 
 # Export credentials via a secret because why not
 echo "$GITHUB_CREDENTIAL" > $HOME/.git-credentials
@@ -84,13 +84,13 @@ else
 	fi
 fi
 
-rm -rf $ZIP_DIR && git clone https://github.com/Prosecuter/AnyKernel3 $ZIP_DIR
+rm -rf $ZIP_DIR && git clone https://github.com/ItsVixano/AnyKernel3 $ZIP_DIR
 }
 
 function clone_kernel(){
 
 mkdir -p $KERNEL_DIR
-git clone --depth=1 https://${GITHUB_USER}@github.com/stormbreaker-project/vinc2 -b dev/pelt $KERNEL_DIR
+git clone --depth=1 https://${GITHUB_USER}@github.com/stormbreaker-project/ysl $KERNEL_DIR
 cd $KERNEL_DIR
 
 }
