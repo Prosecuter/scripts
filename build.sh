@@ -3,7 +3,7 @@
 #
 
 export DEVICE="Vince"
-export CONFIG="vince-perf_defconfig"
+export DEFCONFIG="vince"
 export JOBS=$(nproc --all)
 export CHANNEL_ID="$CHAT_ID"
 export TELEGRAM_TOKEN="$BOT_API_KEY"
@@ -182,6 +182,7 @@ Compiler      :- <i>$COMPILER</i>\n
 on Branch   :- <b>$BRANCH</b>
 Commit       :- <b>$COMMIT</b>\n")"
 
+export CONFIG=$(ls arch/arm64/configs/${DEFCONFIG}*_defconfig)
 build_kernel
 
 # Check if kernel img is there or not and make flashable accordingly
