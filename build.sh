@@ -145,7 +145,8 @@ fi
 cd $ZIP_DIR
 make clean &>/dev/null
 cp $KERN_IMG $ZIP_DIR/zImage
-make zip &>/dev/null
+make normal &>/dev/null
+ls
 ZIP=$(find $ZIP_DIR/*.zip)
 tg_pushzip
 
