@@ -183,6 +183,7 @@ on Branch   :- <b>$BRANCH</b>
 Commit       :- <b>$COMMIT</b>\n")"
 
 export CONFIG=$(ls arch/arm64/configs/${DEFCONFIG}*_defconfig)
+echo $CONFIG
 build_kernel
 
 # Check if kernel img is there or not and make flashable accordingly
