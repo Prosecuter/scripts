@@ -84,7 +84,7 @@ else
 	fi
 fi
 
-rm -rf $ZIP_DIR && git clone https://github.com/ItsVixano/AnyKernel3 $ZIP_DIR
+rm -rf $ZIP_DIR && git clone https://github.com/stormbreaker-project/AnyKernel3 -b ysl $ZIP_DIR
 }
 
 function clone_kernel(){
@@ -159,7 +159,7 @@ export LOG=$HOME/build/build${REVISION}.txt
 #===================== End of function ========================
 #======================= definition ===========================
 
-tg_sendinfo "$(echo -e "Build has been triggered for $DEVICE 🔫\n>> Cloning $COMPILER")"
+tg_sendinfo "$(echo -e "Build has been triggered for $DEVICE 🔫\n>> Cloning COMPILER & Kranul. Till then fek off")"
 clone_tc
 clone_kernel
 
