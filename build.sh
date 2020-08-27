@@ -13,7 +13,7 @@ export IS_MIUI="no"
 export KERNEL_DIR="$HOME/kernel"
 export KBUILD_BUILD_USER="StormbreakerCI-BOT"
 export GCC_COMPILE="yes" 
-export CLANG_VER="12"
+export CLANG_VER="11"
 export KBUILD_BUILD_HOST="Stormbreaker-HQ"
 export REVISION="1"
 
@@ -77,10 +77,11 @@ else
 		export STRIP="${TC_PATH}/clang/aarch64-linux-gnu/bin/strip"
 		export COMPILER="Kdrag0n's Latest Proton Clang"
 	else
-		git clone --depth=1 https://github.com/Unitrix-Kernel/unitrix-clang.git ${TC_PATH}/clang
-		export PATH="${TC_PATH}/clang/bin:$PATH"
-		export STRIP="${TC_PATH}/clang/aarch64-linux-gnu/bin/strip"
-		export COMPILER="Starlight's Proton Clang 11"
+		git clone --depth=1 https://github.com/stormbreaker-project/aarch64-linux-android-4.9 $HOMEgcc > /dev/null 2>&1
+		git clone --depth=1 https://github.com/stormbreaker-project/arm-linux-androideabi-4.9 $HOME/gcc_32 > /dev/null 2>&1
+		git clone --depth 1 https://github.com/sreekfreak995/Clang-11.0.3.git $HOME/clang
+		export KBUILD_COMPILER_STRING="${TOOLCHAIN}/clang/bin/clang --version | head -n 1 | sed -e 's/  */ /g' -e 's/[[:space:]]*$//')";
+		export COMPILER="Stormbreaker Clang 11"
 	fi
 fi
 
