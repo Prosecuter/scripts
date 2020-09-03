@@ -17,6 +17,7 @@ export CLANG_VER="$VER_CLANG"
 export KBUILD_BUILD_HOST="Stormbreaker-HQ"
 export REVISION="7"
 
+
 # Export credentials via a secret because why not
 echo "$GITHUB_CREDENTIAL" > $HOME/.git-credentials
 
@@ -90,7 +91,7 @@ rm -rf $ZIP_DIR && git clone https://github.com/Prosecuter/AnyKernel3 $ZIP_DIR
 function clone_kernel(){
 
 mkdir -p $KERNEL_DIR
-git clone --depth=1 https://${GITHUB_USER}@github.com/stormbreaker-project/vinc2 -b release $KERNEL_DIR
+git clone --depth=1 https://${GITHUB_USER}@github.com/stormbreaker-project/vince -b release $KERNEL_DIR
 cd $KERNEL_DIR
 
 }
