@@ -1,6 +1,6 @@
 #! /bin/bash
 # Copyright (C) 2020 Prosecuter
-#
+# nou
 
 export DEVICE="Ysl"
 export CONFIG="ysl-perf_defconfig"
