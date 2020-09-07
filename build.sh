@@ -15,7 +15,7 @@ export KBUILD_BUILD_USER="StormbreakerCI-BOT"
 export GCC_COMPILE="no" 
 export CLANG_VER="11"
 export KBUILD_BUILD_HOST="Stormbreaker-HQ"
-export REVISION="8"
+export REVISION="8.1"
 
 
 # Export credentials via a secret because why not
