@@ -12,7 +12,7 @@ export ZIP_DIR="$HOME/AK3"
 export IS_MIUI="no"
 export KERNEL_DIR="$HOME/kernel"
 export KBUILD_BUILD_USER="StormbreakerCI-BOT"
-export GCC_COMPILE="no" 
+export GCC_COMPILE="yes" 
 export CLANG_VER="11"
 export KBUILD_BUILD_HOST="Stormbreaker-HQ"
 export REVISION="8.1"
@@ -91,7 +91,7 @@ rm -rf $ZIP_DIR && git clone https://github.com/Prosecuter/AnyKernel3 $ZIP_DIR
 function clone_kernel(){
 
 mkdir -p $KERNEL_DIR
-git clone --depth=1 https://${GITHUB_USER}@github.com/stormbreaker-project/vinc2 -b release $KERNEL_DIR
+git clone --depth=1 https://${GITHUB_USER}@github.com/stormbreaker-project/vinc2 -b rebase-r $KERNEL_DIR
 cd $KERNEL_DIR
 
 }
